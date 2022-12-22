@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>ZK Ownership example</title>
+        <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="row rcenter">
+            <h1>ZK Ownership</h1>
+            <button id="connect-wallet" type="button">Connect Wallet</button>
+        </div>
+
+        <h2 class="mu1">Wallet information</h2>
+        <hr />
+
+        <div class="row rcenter">
+            <label for="address-value">Address</label>
+            <code class="value" id="address-value"></code>
+        </div>
+
+        <h2 class="mu1">Vault information</h2>
+        <hr />
+        <select name="vault-select" id="vault-select">
+            <option value="empty" selected="selected">Select vault</option>
+        </select>
+        <div class="row rcenter">
+            <label for="vault-address">Address</label>
+            <code class="value" id="vault-address"></code><br />
+            <label for="vault-salt">Salt</label>
+            <code class="value" id="vault-salt"></code><br />
+            <label for="vault-pubkeyx">PubKeyX</label>
+            <code class="value" id="vault-pubkeyx"></code><br />
+            <label for="vault-pubkeyy">PubKeyY</label>
+            <code class="value" id="vault-pubkeyy"></code><br />
+            <label for="vault-nonce">Nonce</label>
+            <code class="value" id="vault-nonce"></code><br />
+        </div>
+        <h2 class="mu1">Vault setup</h2>
+        <hr />
+        <h3 class="mu1">Create new vault</h3>
+        <hr />
+        <div class="row rcenter">
+            <button disabled id="create-vault" type="button">Create Vault</button><br />
+            <label for="salt-used">Salt used</label>
+            <code class="value" id="salt-used"></code><br />
+            <label for="vault-deployed">Vault status</label>
+            <code class="value" id="vault-deployed"></code><br />
+        </div>
+        <h3 class="mu1">Import vault</h3>
+        <hr />
+        <div class="row rcenter">
+            <label for="salt-imported">Salt to be imported</label>
+            <input disabled id="salt-imported" name="salt-imported" type="text" />
+            <button disabled id="import-vault" type="button">Import Vault</button>
+        </div>
+
+        <h2 class="mu1">Transaction execution</h2>
+        <hr />
+
+        <div class="row rcenter">
+            <label for="tx-address">Address</label>
+            <input disabled id="tx-address" name="tx-address" type="text" />
+            <label for="tx-value">Value</label>
+            <input disabled id="tx-value" name="tx-value" type="text" />
+            <label for="tx-calldata">Calldata</label>
+            <input disabled id="tx-calldata" name="tx-calldata" type="text" />
+            <button disabled id="tx-execution" type="button">Execute</button><br />
+            <label for="tx-status">Transaction status</label>
+            <code class="value" id="tx-status"></code><br />
+        </div>
+
+        <h2 class="mu1">External Dapp</h2>
+        <hr />
+        <div class="row rcenter">
+            <label for="wc-uri">WalletConnect Uri</label>
+            <input id="wc-uri" name="wc-uri" type="text" />
+            <button id="wc-connect" type="button">Connect</button>
+            <!-- src="https://app-aave-com.ipns.cf-ipfs.com/" -->
+            <!-- src="https://react-app.walletconnect.com/" -->
+            <!-- <iframe
+                src="https://react-app.walletconnect.com/"
+                allow="clipboard-write"
+                title="External dapp UI"
+                id="external-dapp-iframe"
+                width="100%"
+                height="1000"
+                frameborder="0"
+                type="iframe"
+            ></iframe>
+            <p></p> -->
+        </div>
+
+        <script src="../dist/bundle.js"></script>
+    </body>
+</html>

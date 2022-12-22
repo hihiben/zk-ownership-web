@@ -1,0 +1,16 @@
+*.swp
+.env
+
+# Yarn
+yarn-error.log
+
+# Dependency directory
+node_modules
+
+# Webpack
+bundle.js
+
+# lol macs
+.DS_Store
+
+
