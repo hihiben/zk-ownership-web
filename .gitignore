@@ -6,9 +6,7 @@ yarn-error.log
 
 # Dependency directory
 node_modules
-
-# Webpack
-bundle.js
+src
 
 # lol macs
 .DS_Store
